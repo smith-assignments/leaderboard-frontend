@@ -1,0 +1,46 @@
+/* Custom bootstrap theme: vibrant palette + gradient hero + subtle card accents */
+:root {
+  --bs-primary:   #6366f1; 
+  --bs-secondary: #a855f7; 
+  --bs-success:   #10b981; 
+  --bs-info:      #06b6d4; 
+  --bs-warning:   #f59e0b; 
+  --bs-danger:    #ef4444; 
+  --bs-light:     #f8fafc; 
+  --bs-dark:      #0f172a; 
+  --bs-body-color: #0f172a;
+  --bs-body-bg:    #f6f7fb;
+}
+
+/* Global look */
+body { background-color: var(--bs-body-bg); }
+
+/* Gradient hero */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--bs-primary) 85%, #ffffff) 0%,
+    color-mix(in srgb, var(--bs-info)    85%, #ffffff) 50%,
+    color-mix(in srgb, var(--bs-success) 85%, #ffffff) 100%
+  );
+}
+
+/* Soft elevated cards with a color accent bar */
+.card.shadow-sm { box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07); }
+
+.card-accent-primary { border-top: 4px solid var(--bs-primary); }
+.card-accent-secondary { border-top: 4px solid var(--bs-secondary); }
+.card-accent-success { border-top: 4px solid var(--bs-success); }
+.card-accent-info { border-top: 4px solid var(--bs-info); }
+
+
+/* Softer badges */
+.badge-soft-primary   { background-color: color-mix(in srgb, var(--bs-primary) 18%, #ffffff); color: var(--bs-primary); }
+.badge-soft-secondary { background-color: color-mix(in srgb, var(--bs-secondary) 18%, #ffffff); color: var(--bs-secondary); }
+.badge-soft-success   { background-color: color-mix(in srgb, var(--bs-success) 18%, #ffffff); color: var(--bs-success); }
+
+/* Table header stronger but not harsh */
+.table-tinted thead { background: color-mix(in srgb, var(--bs-primary) 12%, #ffffff); }
+
+/* Navbar subtle shadow */
+.navbar-shadow { box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08); }
